@@ -91,3 +91,27 @@ export const Arrow = styled.img`
     height: 18.93px;
     margin-left: 14px;
 `;
+
+export const User = styled.li`
+    width: 342px;
+    height: 58px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    margin-top: 5px;
+    button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+`
