@@ -6,21 +6,31 @@ import {
   Label,
   Input,
   Button,
-  Arrow
+  Arrow,
 } from "./styles/style";
+import PepoleImg from "./assets/imgs/pepole.png";
+import ArrowImg from "./assets/imgs/arrow.png";
 
 function App() {
+  const users = [
+    { id: Math.random(), name: "Christian", age: 18 },
+    { id: Math.random(), name: "Marcos", age: 54 },
+  ];
+
   return (
     <>
       <Container>
-        <ImgPeoples />
+        <ImgPeoples src={PepoleImg} />
         <Containerinformations>
           <H1>Olá!</H1>
           <Label>Nome</Label>
-          <Input/>
+          <Input />
           <Label>Idade</Label>
-          <Input/>
-          <Button>Cadastrar<Arrow/></Button>
+          <Input />
+          <Button>
+            Cadastrar
+            <Arrow src={ArrowImg} />
+          </Button>
         </Containerinformations>
       </Container>
     </>
