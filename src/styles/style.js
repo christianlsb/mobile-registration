@@ -25,4 +25,9 @@ export const Input = styled.input`
 
 `
 
-export const Button = styled.button
+export const Button = styled.button`
+    
+`
+
+export const Arrow = styled.img`
+`
