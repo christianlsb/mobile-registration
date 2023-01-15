@@ -1,6 +1,8 @@
 export const themes = {
   colors: {
-    black: "#000000"
+    black: "#000000",
+    white: "#FFFFFF",
+    gray_400: "#EEEEEE"
   },
 
   fontSize: {

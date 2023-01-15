@@ -1,17 +1,7 @@
-import {
-  Container,
-  ImgPeoples,
-  Containerinformations,
-  H1,
-  Label,
-  Input,
-  Button,
-  Arrow,
-  User
-} from "./styles/style";
-import PepoleImg from "./assets/imgs/pepole.png";
-import ArrowImg from "./assets/imgs/arrow.png";
-import Trash from "./assets/imgs/trash.png"
+import * as S from "./styles/styles";
+import PepoleImg from "./assets/images/pepole.png";
+import ArrowImg from "./assets/images/arrow.png";
+import Trash from "./assets/images/trash.png"
 import { useState } from "react";
 
 function App() {
@@ -35,28 +25,28 @@ function App() {
 
   return (
     <>
-      <Container>
-        <ImgPeoples src={PepoleImg} />
-        <Containerinformations>
-          <H1>Olá!</H1>
-          <Label>Nome</Label>
-          <Input onChange={changeName} placeholder="Nome"/>
-          <Label>Idade</Label>
-          <Input onChange={changeAge} placeholder="Idade"/>
-          <Button onClick={addNewUser}>
+      <S.Container>
+        <S.ImgPeoples src={PepoleImg} />
+        <S.Main>
+          <S.H1>Olá!</S.H1>
+          <S.Label>Nome</S.Label>
+          <S.Input onChange={changeName} placeholder="Nome"/>
+          <S.Label>Idade</S.Label>
+          <S.Input onChange={changeAge} placeholder="Idade"/>
+          <S.Button onClick={addNewUser}>
             Cadastrar
-            <Arrow src={ArrowImg} />
-          </Button>
+            <S.Arrow src={ArrowImg} />
+          </S.Button>
           <ul align="center">
             {users.map((user) => (
-              <User key={user.id}>
+              <S.User key={user.id}>
                 <p>{user.name}</p>  <p>{user.age}</p>
                 <button><img src={Trash}/></button>
-              </User>
+              </S.User>
             ))}
           </ul>
-        </Containerinformations>
-      </Container>
+        </S.Main>
+      </S.Container>
     </>
   );
 }

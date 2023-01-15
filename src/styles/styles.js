@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import BackgroundImg from "../assets/imgs/background1.jpg";
+import BackgroundImg from "../assets/images/background1.jpg";
+import { themes } from "./theme";
 
 export const Container = styled.div`
   display: flex;
@@ -17,11 +18,11 @@ export const ImgPeoples = styled.img`
   margin-top: 30px;
 `;
 
-export const Containerinformations = styled.div`
+export const Main = styled.div`
   display: flex;
   flex-direction: column;
   width: 414px;
-  height: 645px;
+  height: 100vh;
   background: linear-gradient(
     157.44deg,
     rgba(255, 255, 255, 0.6) 0.84%,
@@ -30,24 +31,24 @@ export const Containerinformations = styled.div`
   );
   border-radius: 61px 61px 0px 0px;
   padding: 50px 36px;
-  height: 100vh;
+ 
 `;
 
 export const H1 = styled.h1`
-  font-weight: 700;
-  font-size: 34px;
+  font-weight: ${themes.fontSize.normal};
+  font-size: ${themes.fontSize["4xl"]};
   line-height: 40px;
   text-align: center;
-  color: #ffffff;
+  color: ${themes.colors.white};
   margin: 50px 0 103px 0;
 `;
 
 export const Label = styled.label`
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: ${themes.fontWeight.normal};
+  font-size: ${themes.fontSize.lg};
   line-height: 22px;
   letter-spacing: -0.408px;
-  color: #eeeeee;
+  color: ${themes.colors.gray_400};;
   margin-left: 25px;
 `;
 
@@ -60,10 +61,10 @@ export const Input = styled.input`
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: ${themes.fontWeight.bold};
+  font-size: ${themes.fontSize["2xl"]};
   line-height: 28px;
-  color: #ffffff;
+  color: ${themes.colors.white};
   margin-bottom: 34px;
 `;
 
@@ -76,10 +77,10 @@ export const Button = styled.button`
   background: rgba(0, 0, 0, 0.8);
   border-radius: 14px;
   border: none;
-  font-weight: 700;
-  font-size: 17px;
+  font-weight: ${themes.fontWeight.normal};
+  font-size: ${themes.fontSize.md};
   line-height: 28px;
-  color: #ffffff;
+  color: ${themes.colors.white};
   cursor: pointer;
   &:hover{
      opacity: 0.8;
@@ -95,17 +96,17 @@ export const Arrow = styled.img`
 export const User = styled.li`
     width: 342px;
     height: 58px;
-    background: rgba(255, 255, 255, 0.25);
+    color: ${themes.colors.white};
     border-radius: 14px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: ${themes.fontWeight.normal};
+    font-size: ${themes.fontSize["2xl"]};
     line-height: 28px;
-    color: #FFFFFF;
+    color: ${themes.colors.white};
     outline: none;
     border: none;
     margin-top: 5px;
