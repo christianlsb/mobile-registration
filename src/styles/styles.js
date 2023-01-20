@@ -85,6 +85,7 @@ export const Button = styled.button`
   &:hover{
      opacity: 0.8;
   }
+  margin-bottom: 15px;
 `;
 
 export const Arrow = styled.img`
@@ -109,10 +110,11 @@ export const User = styled.li`
     color: ${themes.colors.white};
     outline: none;
     border: none;
-    margin-top: 5px;
     button{
         background: none;
         border: none;
         cursor: pointer;
     }
+    margin-top: 5px;
+    
 `
