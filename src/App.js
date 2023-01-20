@@ -1,30 +1,32 @@
 import * as S from "./styles/styles";
+import axios from "axios";
 import PepoleImg from "./assets/images/pepole.png";
 import ArrowImg from "./assets/images/arrow.png";
 import Trash from "./assets/images/trash.png";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [name, setName] = useState();
-  const [age, setAge] = useState();
+  const inputName = useRef();
+  const inputAge = useRef();
 
-  function addNewUser() {
-    setUsers([...users, { id: Math.random(), name, age }]);
+  async function addNewUser() {
+    const {data: newUser} = await axios.post("http://localhost:3001/users", {
+      name: inputName.current.value,
+      age: inputAge.current.value,
+    });
+
+    setUsers([...users, newUser])
   }
 
-  function changeName(event) {
-    setName(event.target.value);
-  }
+  async function deleteUser(userId) {
+     axios.delete(`http://localhost:3001/users/${userId}`)
 
-  function changeAge(event) {
-    setAge(event.target.value);
-  }
+    const newUsers = users.filter((user) => user.id !== userId);
 
-  function deleteUser(userId) {
-    const newUsers = users.filter(user => user.id !== userId)
+    setUsers(newUsers,deleteUser);
 
-    setUsers(newUsers)
+    console.log(deleteUser)
   }
 
   return (
@@ -34,9 +36,9 @@ function App() {
         <S.Main>
           <S.H1>Olá!</S.H1>
           <S.Label>Nome</S.Label>
-          <S.Input onChange={changeName} placeholder="Nome" />
+          <S.Input ref={inputName} placeholder="Nome" />
           <S.Label>Idade</S.Label>
-          <S.Input onChange={changeAge} placeholder="Idade" />
+          <S.Input ref={inputAge} placeholder="Idade" />
           <S.Button onClick={addNewUser}>
             Cadastrar
             <S.Arrow src={ArrowImg} />
@@ -46,7 +48,7 @@ function App() {
               <S.User key={user.id}>
                 <p>{user.name}</p> <p>{user.age}</p>
                 <button onClick={() => deleteUser(user.id)}>
-                  <img src={Trash} />
+                  <img src={Trash} alt="img-trash" />
                 </button>
               </S.User>
             ))}
