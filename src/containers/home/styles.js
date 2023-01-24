@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-image: url(${BackgroundImg});
   background-size: cover;
   gap: 40px;
-  height: 120vh;
+  height: 100%;
 `;
 
 export const ImgPeoples = styled.img`
@@ -18,30 +18,6 @@ export const ImgPeoples = styled.img`
   margin-top: 30px;
 `;
 
-export const Main = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 414px;
-  height: 100vh;
-  background: linear-gradient(
-    157.44deg,
-    rgba(255, 255, 255, 0.6) 0.84%,
-    rgba(255, 255, 255, 0.6) 0.85%,
-    rgba(255, 255, 255, 0.15) 100%
-  );
-  border-radius: 61px 61px 0px 0px;
-  padding: 50px 36px;
- 
-`;
-
-export const H1 = styled.h1`
-  font-weight: ${themes.fontSize.normal};
-  font-size: ${themes.fontSize["4xl"]};
-  line-height: 40px;
-  text-align: center;
-  color: ${themes.colors.white};
-  margin: 50px 0 103px 0;
-`;
 
 export const Label = styled.label`
   font-weight: ${themes.fontWeight.normal};
@@ -68,25 +44,6 @@ export const Input = styled.input`
   margin-bottom: 34px;
 `;
 
-export const Button = styled.button`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 342px;
-  height: 74px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 14px;
-  border: none;
-  font-weight: ${themes.fontWeight.normal};
-  font-size: ${themes.fontSize.md};
-  line-height: 28px;
-  color: ${themes.colors.white};
-  cursor: pointer;
-  &:hover{
-     opacity: 0.8;
-  }
-  margin-bottom: 15px;
-`;
 
 export const Arrow = styled.img`
     width: 22.95px;
