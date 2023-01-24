@@ -1,4 +1,4 @@
-import styled from "styled-components";
+  import styled from "styled-components";
 import BackgroundImg from "../assets/images/background1.jpg";
 import { themes } from "./theme";
 
@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-image: url(${BackgroundImg});
   background-size: cover;
   gap: 40px;
-  height: 100vh;
+  height: 120vh;
 `;
 
 export const ImgPeoples = styled.img`
