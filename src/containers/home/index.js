@@ -1,11 +1,11 @@
-import * as S from "./styles/styles";
+import * as S from "./styles";
 import axios from "axios";
-import PepoleImg from "./assets/images/pepole.png";
-import ArrowImg from "./assets/images/arrow.png";
-import Trash from "./assets/images/trash.png";
+import PepoleImg from "../../assets/images/pepole.png";
+import ArrowImg from "../../assets/images/arrow.png";
+import Trash from "../../assets/images/trash.png";
 import { useState, useRef } from "react";
 
-function App() {
+function Home() {
   const [users, setUsers] = useState([]);
   const inputName = useRef();
   const inputAge = useRef();
@@ -15,7 +15,6 @@ function App() {
     //   name: inputName.current.value,
     //   age: inputAge.current.value,
     // });
-
     // setUsers([...users, newUser])
 
     const {data : allUsers} = await axios.get("http://localhost:3001/users")
@@ -63,4 +62,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
