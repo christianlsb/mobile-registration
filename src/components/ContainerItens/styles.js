@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.div`
   display: flex;
@@ -14,8 +14,10 @@ export const Container = styled.div`
   border-radius: 61px 61px 0px 0px;
   padding: 50px 36px;
 
-    ${props => props.isBlur && `
+  ${props =>
+    props.isBlur &&
+    `
         backdrop-filter: blur(22.5px);
         min-height: calc(100vh - 170px)
-    ` };
-`;
+    `};
+`

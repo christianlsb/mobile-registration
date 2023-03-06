@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import BackgroundImg from "../../assets/images/bgImage.png";
-import { themes } from "../../styles/theme";
+import styled from "styled-components"
+
+import BackgroundImg from "../../assets/images/bgImage.png"
+import { themes } from "../../styles/theme"
 
 export const Container = styled.div`
   display: flex;
@@ -11,13 +12,13 @@ export const Container = styled.div`
   gap: 40px;
   height: 100%;
   min-height: 120vh;
-`;
+`
 
 export const ImgPeoples = styled.img`
   width: 307.96px;
   height: 99.47px;
   margin-top: 30px;
-`;
+`
 
 export const Label = styled.label`
   font-weight: ${themes.fontWeight.normal};
@@ -26,7 +27,7 @@ export const Label = styled.label`
   letter-spacing: -0.408px;
   color: ${themes.colors.gray_400};
   margin-left: 25px;
-`;
+`
 
 export const Input = styled.input`
   width: 342px;
@@ -42,13 +43,12 @@ export const Input = styled.input`
   line-height: 28px;
   color: ${themes.colors.white};
   margin-bottom: 34px;
-`;
+`
 
 export const Arrow = styled.img`
   transform: rotate(180deg);
   margin-right: 12px;
-  
-`;
+`
 
 export const Button = styled.button`
   align-items: center;
@@ -68,7 +68,7 @@ export const Button = styled.button`
     opacity: 0.8;
   }
   margin-bottom: 15px;
-`;
+`
 
 export const User = styled.li`
   width: 342px;
@@ -93,4 +93,10 @@ export const User = styled.li`
   }
   margin-top: 5px;
   margin: 28px 0 28px 0;
-`;
+`
+export const NoUserFound = styled.p`
+  font-size: 1rem;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+`

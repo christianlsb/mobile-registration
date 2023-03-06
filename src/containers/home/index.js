@@ -1,32 +1,33 @@
-import * as S from "./styles";
-import axios from "axios";
-import PepoleImg from "../../assets/images/pepole.png";
-import ArrowImg from "../../assets/images/arrow.png";
-import Title from "../../components/Title";
-import ContainerItens from "../../components/ContainerItens";
-import Button from "../../components/Button";
-import { useState, useRef, useEffect } from "react";
+import axios from "axios"
+import React, { useState, useRef, useEffect } from "react"
+
+import ArrowImg from "../../assets/images/arrow.png"
+import PepoleImg from "../../assets/images/pepole.png"
+import Button from "../../components/Button"
+import ContainerItens from "../../components/ContainerItens"
+import Title from "../../components/Title"
+import * as S from "./styles"
 
 function Home() {
-  const [users, setUsers] = useState([]);
-  const inputName = useRef();
-  const inputAge = useRef();
+  const [users, setUsers] = useState([])
+  const inputName = useRef()
+  const inputAge = useRef()
 
   async function addNewUser() {
     const { data: newUser } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value,
-      age: inputAge.current.value,
-    });
-    setUsers([...users, newUser]);
+      age: inputAge.current.value
+    })
+    setUsers([...users, newUser])
   }
 
   useEffect(() => {
     async function fetchUsers() {
-      const { data: allUsers } = await axios.get("http://localhost:3001/users");
-      setUsers(allUsers);
+      const { data: allUsers } = await axios.get("http://localhost:3001/users")
+      setUsers(allUsers)
     }
-    fetchUsers();
-  }, []);
+    fetchUsers()
+  }, [])
 
   return (
     <>
@@ -45,7 +46,7 @@ function Home() {
         </ContainerItens>
       </S.Container>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home

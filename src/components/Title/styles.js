@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { themes } from "../../styles/theme";
+import styled from "styled-components"
+
+import { themes } from "../../styles/theme"
 
 export const H1 = styled.h1`
   font-weight: ${themes.fontSize.normal};
@@ -9,7 +10,9 @@ export const H1 = styled.h1`
   color: ${themes.colors.white};
   margin: 50px;
 
-  ${props => props.isMargin && `
+  ${props =>
+    props.isMargin &&
+    `
     margin-bottom: 83px;
   `}
-`;
+`
